@@ -44,16 +44,16 @@ const HomePage = () => {
           data-aos-delay="200"
           className="grid lg:grid-cols-2 gap-8"
         >
-          <BlogCard post={postsData[0]} />
+          <BlogCard post={postsData[0]} post1="h-[228px]" />
 
           <div
             data-aos="fade-left"
             data-aos-delay="300"
             className="flex flex-col gap-8"
           >
-            <RecBlogCard postRe={postsData[1]} />
+            <RecBlogCard postRe={postsData[1]} rePost="text-lg/[28px]" />
 
-            <RecBlogCard postRe={postsData[2]} />
+            <RecBlogCard postRe={postsData[2]} rePost="text-lg/[28px]" />
           </div>
         </div>
 

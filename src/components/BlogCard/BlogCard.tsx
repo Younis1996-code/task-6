@@ -7,7 +7,7 @@ import arrowIcon from "../../assets/HomePhotos/arrow-up-right (1).svg";
 import arrowIconW from "../../assets/HomePhotos/arrow-up-right.svg";
 import type { RootState } from "../../redux/store";
 
-const BlogCard = ({ post }: { post: PostsTypes }) => {
+const BlogCard = ({ post, post1 }: { post: PostsTypes; post1?: string }) => {
   const { mode } = useSelector((state: RootState) => state.posts);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const BlogCard = ({ post }: { post: PostsTypes }) => {
       className="flex flex-col cursor-pointer"
       onClick={() => handleArrowClick(post.id)}
     >
-      <div className="w-full h-[240px]">
+      <div className={`w-full  ${post1 ? post1 : "h-[240px]"}`}>
         <img
           className="w-full h-full object-cover"
           src={post.image}

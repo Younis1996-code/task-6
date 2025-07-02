@@ -12,10 +12,12 @@ const RecBlogCard = ({
   postRe,
   postRe1,
   postRe2,
+  rePost,
 }: {
   postRe: PostsTypes;
   postRe1?: string;
   postRe2?: string;
+  rePost?: string;
 }) => {
   const { mode } = useSelector((state: RootState) => state.posts);
   const navigate = useNavigate();
@@ -45,7 +47,11 @@ const RecBlogCard = ({
           {postRe.date}
         </p>
         <div className="flex justify-between">
-          <h3 className="text-2xl/[32px] font-semibold dark:text-white">
+          <h3
+            className={` font-semibold dark:text-white ${
+              rePost ? rePost : "text-2xl/[32px]"
+            }`}
+          >
             {postRe.title}
           </h3>
           <div className="w-[24px] h-[28px]">
