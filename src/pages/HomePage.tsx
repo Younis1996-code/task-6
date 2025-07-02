@@ -26,7 +26,7 @@ const HomePage = () => {
     <div data-aos="fade-up" className="mt-5 md:mt-7 lg:mt-12">
       <h1
         data-aos="fade-left"
-        className="font-inter dark:text-white text-7xl/[100%] md:text-[160px]/[100%] xl:text-[230px]/[100%] py-1 md:py-5 xl:py-8 font-bold border-y border-gray-300 text-center"
+        className="font-inter dark:text-white text-[19vw]/[100%] md:text-[19.18vw]/[100%] lg:text-[15vw]/[100%] xl:text-[15.965vw]/[100%] py-1 md:py-5 xl:py-8 font-bold border-y border-gray-300 text-center"
       >
         THE BLOG
       </h1>
