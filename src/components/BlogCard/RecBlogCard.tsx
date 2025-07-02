@@ -28,7 +28,8 @@ const RecBlogCard = ({
 
   return (
     <div
-      className={`flex flex-col gap-6 ${
+      onClick={() => handleArrowClick(postRe.id)}
+      className={`cursor-pointer flex flex-col gap-6 ${
         postRe1 ? postRe1 : "md:flex-row md:gap-6 mt-0"
       }`}
     >
@@ -50,15 +51,13 @@ const RecBlogCard = ({
           <div className="w-[24px] h-[28px]">
             {mode === "dark" ? (
               <img
-                className="cursor-pointer w-full h-full object-cover"
-                onClick={() => handleArrowClick(postRe.id)}
+                className="w-full h-full object-cover"
                 src={arrowIconW}
                 alt="arrowIcon"
               />
             ) : (
               <img
-                className="cursor-pointer w-full h-full object-cover"
-                onClick={() => handleArrowClick(postRe.id)}
+                className="w-full h-full object-cover"
                 src={arrowIcon}
                 alt="arrowIcon"
               />

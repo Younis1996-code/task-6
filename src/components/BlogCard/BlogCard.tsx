@@ -21,7 +21,8 @@ const BlogCard = ({ post }: { post: PostsTypes }) => {
     <div
       data-aos="fade-up-right"
       data-aos-delay="200"
-      className="flex flex-col"
+      className="flex flex-col cursor-pointer"
+      onClick={() => handleArrowClick(post.id)}
     >
       <div className="w-full h-[240px]">
         <img
@@ -41,15 +42,13 @@ const BlogCard = ({ post }: { post: PostsTypes }) => {
           <div className="w-[24px] h-[28px]">
             {mode === "dark" ? (
               <img
-                className="cursor-pointer w-full h-full object-cover"
-                onClick={() => handleArrowClick(post.id)}
+                className="w-full h-full object-cover"
                 src={arrowIconW}
                 alt="arrowIcon"
               />
             ) : (
               <img
-                className="cursor-pointer w-full h-full object-cover"
-                onClick={() => handleArrowClick(post.id)}
+                className="w-full h-full object-cover"
                 src={arrowIcon}
                 alt="arrowIcon"
               />
