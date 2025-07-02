@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { showPost } from "../../redux/slices";
 import type { PostsTypes } from "../../data/PostsData";
 import Categories from "../Categories/Categories";
-import arrowIcon from "../../assets/HomePhotos/Icon.svg";
+import arrowIcon from "../../assets/HomePhotos/arrow-up-right (1).svg";
 import arrowIconW from "../../assets/HomePhotos/arrow-up-right.svg";
 import ArPara from "../ArticleEle/ArPara";
 
@@ -48,12 +48,21 @@ const RecBlogCard = ({
             {postRe.title}
           </h3>
           <div className="w-[24px] h-[28px]">
-            <img
-              className="cursor-pointer w-full h-full object-cover"
-              onClick={() => handleArrowClick(postRe.id)}
-              src={mode === "dark" ? arrowIconW : arrowIcon}
-              alt="arrowIcon"
-            />
+            {mode === "dark" ? (
+              <img
+                className="cursor-pointer w-full h-full object-cover"
+                onClick={() => handleArrowClick(postRe.id)}
+                src={arrowIconW}
+                alt="arrowIcon"
+              />
+            ) : (
+              <img
+                className="cursor-pointer w-full h-full object-cover"
+                onClick={() => handleArrowClick(postRe.id)}
+                src={arrowIcon}
+                alt="arrowIcon"
+              />
+            )}
           </div>
         </div>
 

@@ -20,7 +20,7 @@ function App() {
   }, [dispatch, mode]);
 
   return (
-    <div className="text-[#1A1A1A] overflow-hidden lg:px-28 transition-colors duration-300 bg-white dark:bg-[#090D1F] pt-16 lg:pt-24">
+    <div className="font-inter text-[#1A1A1A] overflow-hidden lg:px-28 transition-colors duration-300 bg-white dark:bg-[#090D1F] pt-16 lg:pt-24">
       <NavBar />
       <Outlet />
       <Footer />

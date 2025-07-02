@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import type { PostsTypes } from "../../data/PostsData";
 import { useNavigate } from "react-router-dom";
 import { showPost } from "../../redux/slices";
-import arrowIcon from "../../assets/HomePhotos/Icon.svg";
+import arrowIcon from "../../assets/HomePhotos/arrow-up-right (1).svg";
 import arrowIconW from "../../assets/HomePhotos/arrow-up-right.svg";
 import type { RootState } from "../../redux/store";
 
@@ -18,7 +18,11 @@ const BlogCard = ({ post }: { post: PostsTypes }) => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div
+      data-aos="fade-up-right"
+      data-aos-delay="200"
+      className="flex flex-col"
+    >
       <div className="w-full h-[240px]">
         <img
           className="w-full h-full object-cover"
@@ -35,12 +39,21 @@ const BlogCard = ({ post }: { post: PostsTypes }) => {
             {post.title}
           </h3>
           <div className="w-[24px] h-[28px]">
-            <img
-              className="cursor-pointer w-full h-full object-cover"
-              onClick={() => handleArrowClick(post.id)}
-              src={mode === "dark" ? arrowIconW : arrowIcon}
-              alt="arrowIcon"
-            />
+            {mode === "dark" ? (
+              <img
+                className="cursor-pointer w-full h-full object-cover"
+                onClick={() => handleArrowClick(post.id)}
+                src={arrowIconW}
+                alt="arrowIcon"
+              />
+            ) : (
+              <img
+                className="cursor-pointer w-full h-full object-cover"
+                onClick={() => handleArrowClick(post.id)}
+                src={arrowIcon}
+                alt="arrowIcon"
+              />
+            )}
           </div>
         </div>
         <p className="text-base/[24px] font-normal text-pali dark:text-pada">
