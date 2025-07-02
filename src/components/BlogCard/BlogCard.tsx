@@ -34,12 +34,14 @@ const BlogCard = ({ post }: { post: PostsTypes }) => {
           <h3 className="text-2xl/[32px] font-semibold dark:text-white">
             {post.title}
           </h3>
-          <img
-            className="cursor-pointer"
-            onClick={() => handleArrowClick(post.id)}
-            src={mode === "dark" ? arrowIconW : arrowIcon}
-            alt="arrowIcon"
-          />
+          <div className="w-[24px] h-[28px]">
+            <img
+              className="cursor-pointer w-full h-full object-cover"
+              onClick={() => handleArrowClick(post.id)}
+              src={mode === "dark" ? arrowIconW : arrowIcon}
+              alt="arrowIcon"
+            />
+          </div>
         </div>
         <p className="text-base/[24px] font-normal text-pali dark:text-pada">
           {post.title === "Grid system for better Design User Interface"

@@ -47,12 +47,14 @@ const RecBlogCard = ({
           <h3 className="text-2xl/[32px] font-semibold dark:text-white">
             {postRe.title}
           </h3>
-          <img
-            className="cursor-pointer"
-            onClick={() => handleArrowClick(postRe.id)}
-            src={mode === "dark" ? arrowIconW : arrowIcon}
-            alt="arrowIcon"
-          />
+          <div className="w-[24px] h-[28px]">
+            <img
+              className="cursor-pointer w-full h-full object-cover"
+              onClick={() => handleArrowClick(postRe.id)}
+              src={mode === "dark" ? arrowIconW : arrowIcon}
+              alt="arrowIcon"
+            />
+          </div>
         </div>
 
         <ArPara val={postRe.para} />
