@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import { useDispatch, useSelector } from "react-redux";
@@ -24,6 +24,7 @@ function App() {
       <NavBar />
       <Outlet />
       <Footer />
+      <ScrollRestoration />
     </div>
   );
 }
