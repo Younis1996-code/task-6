@@ -23,7 +23,7 @@ const Newsletter = () => {
         <StoriesCom />
       </div>
 
-      <h3 className="mt-15 mb-8 text-2xl/[32px] font-semibold">
+      <h3 className="mt-15 mb-8 text-2xl/[32px] font-semibold dark:text-white">
         All blog posts
       </h3>
 
